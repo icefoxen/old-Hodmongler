@@ -1,0 +1,26 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ctype="Workspace" />
+  <MonoDevelop.Ide.DebuggingService>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService>
+  <MonoDevelop.Ide.Workbench ActiveDocument="e:\home\my.src\Meshomatic\DisplayMesh\Main.cs" ctype="Workbench">
+    <Files>
+      <File FileName="e:\home\my.src\Meshomatic\DisplayMesh\Main.cs" Line="3" Column="14" />
+      <File FileName="Hodmongler\HodData.cs" Line="2" Column="17" />
+      <File FileName="Hodmongler\HodReader.cs" Line="1" Column="1" />
+      <File FileName="Hodmongler\Main.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Hodmongler" expanded="True">
+            <Node name="References" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

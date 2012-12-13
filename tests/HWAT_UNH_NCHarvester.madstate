@@ -1,0 +1,59 @@
+--=============================================================================
+--    Name    : Vgr_ResourceCollector.madStates
+--    Purpose : Animation state data.
+--
+--Created 280403 by cgladstone
+--Copyright Relic Entertainment, Inc.  All rights reserved.
+--=============================================================================*/
+
+function HWAT_UNH_NCHARVESTER_Normal_OnSet(ship)
+--    print("HWAT_UNH_NCHARVESTER_Normal_OnSet")
+    if(isAnimRunning(ship,"Launch") == 0) then	
+--     print("HWAT_UNH_NCHARVESTER_Normal_OnSet Inner logic")
+     startTime = 0
+     startAnim(ship, "Launch")
+     setPauseTime(ship, "Launch", 0)      
+     startAnim(ship, "BeakOpen")
+     setPauseTime(ship, "BeakOpen", 0)      
+    end
+end
+
+function HWAT_UNH_NCHARVESTER_Launched_OnSet(ship)
+    stopAnim(ship, "Dock")
+--    print("HWAT_UNH_NCHARVESTER_Launch_OnSet")
+    startTime = 0
+    setTime(ship,"Launch",startTime) 
+    startAnim(ship, "Launch")
+    unpauseAnim(ship, "Launch")
+    setPauseTime(ship, "Launch", 50)
+end
+
+function HWAT_UNH_NCHARVESTER_ResourceStart_OnSet(ship)
+--    print("HWAT_UNH_NCHARVESTER_ResourceStart_OnSet")
+    stopAnim(ship, "BeakClose")
+    startTime = 0
+    setTime(ship,"BeakOpen",startTime) 
+    startAnim(ship, "BeakOpen")
+    unpauseAnim(ship, "BeakOpen")
+    setPauseTime(ship, "BeakOpen", 50)
+end
+
+function HWAT_UNH_NCHARVESTER_ResourceEnd_OnSet(ship)
+--    print("HWAT_UNH_NCHARVESTER_ResourceEnd_OnSet")
+    stopAnim(ship, "BeakOpen")
+    startTime = 0
+    setTime(ship,"BeakClose",startTime) 
+    startAnim(ship, "BeakClose")
+    unpauseAnim(ship, "BeakClose")
+    setPauseTime(ship, "BeakClose", 50)
+end
+
+function HWAT_UNH_NCHARVESTER_Docked_OnSet(ship)
+--    print("HWAT_UNH_NCHARVESTER_Docked_OnSet")
+    stopAnim(ship, "Launch")
+    startTime = 0
+    setTime(ship,"Dock",startTime) 
+    startAnim(ship, "Dock")
+    unpauseAnim(ship, "Dock")
+    setPauseTime(ship, "Dock", 50)
+end
